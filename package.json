@@ -1,0 +1,27 @@
+{
+  "name": "game-feel",
+  "version": "1.0.0",
+  "description": "Game Feel methodology plus a small adapter that connects Cursor líquido to juice levels. Generic, no mascot required.",
+  "private": true,
+  "license": "MIT",
+  "author": "Jorge Suárez",
+  "homepage": "https://github.com/jorgefsb/game-feel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgefsb/game-feel.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "node scripts/setup-demo.mjs",
+    "verify": "node scripts/setup-demo.mjs --verify-only",
+    "demo": "node scripts/serve.mjs",
+    "test": "node --test \"tests/unit/*.test.mjs\"",
+    "test:browser": "node tests/browser/run.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1"
+  }
+}

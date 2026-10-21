@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es" data-jz-sound="on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<title>Game Feel · demo genérico</title>
+<!-- Run `npm run setup` first: vendor/ is generated and verified, never committed. -->
+<link rel="stylesheet" href="../vendor/juice/1.2.0/juice.css">
+<link rel="stylesheet" href="../vendor/juice/1.2.0/juice-menu.css">
+<link rel="stylesheet" href="../vendor/juice/1.2.0/hardcore/hardcore.css">
+<link rel="stylesheet" href="../vendor/cursor-liquido/cursor-liquido.css">
+<link rel="stylesheet" href="../src/game-feel-cursor.css">
+<style>
+/* Brand-neutral demo tokens. A real brand sets its own values here. */
+:root {
+  color-scheme: dark;
+  --bg: #111317; --surface: #1b1e24; --line: #3a3f48; --text: #f2f4f7; --muted: #a9b0bb; --accent: #6ea8fe;
+  --jz-c1: #6ea8fe; --jz-c2: #c9d1d9; --jz-c3: #f2f4f7;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg); color: var(--text);
+}
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.5; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+/* The Juega panel opens toward the left from the dock, so the dock stays on the right edge. */
+header nav { margin-left: auto; }
+.mark { font-weight: 700; letter-spacing: -.02em; font-size: 18px; }
+.mark small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+main { max-width: 980px; margin: 0 auto; padding: 24px; }
+h1 { font-size: clamp(28px, 6vw, 48px); line-height: 1.05; letter-spacing: -.03em; margin: 8px 0 12px; }
+h2 { font-size: 22px; margin: 0 0 8px; }
+p { color: var(--muted); max-width: 62ch; }
+section { margin: 32px 0; }
+.btn { min-height: 44px; padding: 10px 16px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
+.btn--primary { background: var(--accent); border-color: var(--accent); color: #0b1220; font-weight: 600; }
+.btn:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+label.field { display: grid; gap: 4px; font-size: 14px; color: var(--muted); flex: 1 1 220px; }
+label.field input { min-height: 44px; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font: inherit; width: 100%; }
+[data-status] { min-height: 1.5em; font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+[data-status].is-error { color: #ffb4a8; }
+.goals { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.goals li { padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); }
+.goals li.is-done { color: var(--text); border-color: var(--accent); }
+.goals li.is-done::before { content: "✓ "; color: var(--accent); }
+.tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.tabs [aria-selected="true"] { border-color: var(--accent); color: var(--accent); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.demo-card { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.demo-card p { margin: 0; }
+#cursor-status { font: 12px/1.5 ui-monospace, monospace; color: var(--muted); white-space: pre-wrap; }
+/* juice-menu 1.2.0 writes a Moki hint into the Hardcore lock note. This page
+   has no mascot, so it hides that note and explains its own achievement. */
+.jz-hard__lock { display: none !important; }
+footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">Tu marca<small>Game Feel · demo sin mascota</small></div>
+  <nav class="row" aria-label="Juego y sonido"><button type="button" class="juice-sfx"></button></nav>
+</header>
+<main>
+  <section>
+    <h1>Que la página conteste cuando la usas</h1>
+    <p>Demo genérico: juice 1.2.0 (núcleo, menú Juega y Hardcore) más Cursor líquido conectado por el adapter de Game Feel. No usa mascota. Cambia el nivel en «Juega» y prueba las acciones.</p>
+    <output id="cursor-status" aria-live="polite"></output>
+  </section>
+
+  <section aria-labelledby="core-title">
+    <h2 id="core-title">Acciones núcleo</h2>
+    <p>Tres acciones reciben la mejor respuesta. Hazlas las tres para abrir Hardcore durante esta visita.</p>
+    <ul class="goals" id="goals">
+      <li data-goal="tap">Da un toque</li>
+      <li data-goal="note">Guarda una nota</li>
+      <li data-goal="tab">Cambia de pestaña</li>
+    </ul>
+    <p id="unlock-note" role="status"></p>
+    <div class="row">
+      <button type="button" class="btn btn--primary" data-jz="jz-tap" id="tap">Dar un toque</button>
+    </div>
+    <form id="note-form" class="row" novalidate>
+      <label class="field">Nota
+        <input id="note" name="note" autocomplete="off" placeholder="Escribe algo corto">
+      </label>
+      <button type="submit" class="btn" id="save">Guardar nota</button>
+      <p data-status id="note-status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section aria-labelledby="tabs-title">
+    <h2 id="tabs-title">Secciones</h2>
+    <div class="tabs" role="tablist">
+      <button type="button" class="btn" role="tab" aria-selected="true" aria-controls="panel-a" id="tab-a">Resumen</button>
+      <button type="button" class="btn" role="tab" aria-selected="false" aria-controls="panel-b" id="tab-b">Detalles</button>
+    </div>
+    <div class="grid" id="panel-a" role="tabpanel" aria-labelledby="tab-a">
+      <article class="demo-card"><h3>Disparador</h3><p>Lo que hace la persona: picar, escribir, mandar.</p></article>
+      <article class="demo-card"><h3>Respuesta</h3><p>Lo que contesta la página, en menos de 100 ms.</p></article>
+      <article class="demo-card"><h3>Proporción</h3><p>Lo chico responde chico; lo importante, grande.</p></article>
+    </div>
+    <div class="grid" id="panel-b" role="tabpanel" aria-labelledby="tab-b" hidden>
+      <article class="demo-card"><h3>Sonido</h3><p>Corto, después de un gesto, y siempre se puede apagar.</p></article>
+      <article class="demo-card"><h3>Movimiento reducido</h3><p>La preferencia del sistema fuerza Nada.</p></article>
+      <article class="demo-card"><h3>Sin estorbar</h3><p>Nada tapa texto ni botones; el puntero nativo se queda.</p></article>
+    </div>
+  </section>
+</main>
+<footer>Código MIT. Demo local: todo se sirve desde el mismo origen.</footer>
+<script src="../vendor/juice/1.2.0/juice.js" defer></script>
+<script src="../vendor/juice/1.2.0/juice-menu.js" defer></script>
+<script src="../vendor/juice/1.2.0/hardcore/hardcore.js" defer></script>
+<script src="../vendor/cursor-liquido/cursor-liquido.js" defer></script>
+<script src="../src/game-feel-cursor.js" defer></script>
+<script src="demo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+{
+  "suite": "game-feel",
+  "started": "2026-10-21T12:01:05.250Z",
+  "playwright": "1.64.1",
+  "chromium": "156.0.8078.4",
+  "renderer": "Chromium headless with SwiftShader WebGL. Emulated viewports, not physical devices.",
+  "total": 17,
+  "passed": 17,
+  "failed": 0,
+  "results": [
+    {
+      "name": "generic page runs without any mascot",
+      "status": "PASS",
+      "detail": {
+        "moki": "undefined",
+        "spots": 0,
+        "owner": "liquid"
+      }
+    },
+    {
+      "name": "Hardcore stays locked until the page achievement is earned with real events",
+      "status": "PASS",
+      "detail": {
+        "unlockedBy": "tap + typed note + tab",
+        "stored": null
+      }
+    },
+    {
+      "name": "Juega off maps to nada",
+      "status": "PASS",
+      "detail": {
+        "intensity": "nada",
+        "layer": "off",
+        "radius": 0,
+        "fluid": "not-created"
+      }
+    },
+    {
+      "name": "Juega subtle maps to poquito",
+      "status": "PASS",
+      "detail": {
+        "intensity": "poquito",
+        "layer": "dots",
+        "radius": 0,
+        "fluid": "not-created"
+      }
+    },
+    {
+      "name": "Juega full maps to mucho",
+      "status": "PASS",
+      "detail": {
+        "intensity": "mucho",
+        "layer": "fluid",
+        "radius": 10,
+        "fluid": "running"
+      }
+    },
+    {
+      "name": "Juega hard maps to hardcore",
+      "status": "PASS",
+      "detail": {
+        "intensity": "hardcore",
+        "layer": "fluid",
+        "radius": 18,
+        "fluid": "running"
+      }
+    },
+    {
+      "name": "Poquito draws the original 7 px dots in orange, dark and cream",
+      "status": "PASS",
+      "detail": {
+        "dots": 7,
+        "colours": [
+          "rgb(34, 33, 31)",
+          "rgb(255, 107, 53)",
+          "rgb(244, 232, 213)"
+        ]
+      }
+    },
+    {
+      "name": "Hardcore shows one trail: liquid visible, old .jzh-t hidden, celebrations kept",
+      "status": "PASS",
+      "detail": {
+        "old": 2,
+        "oldVisible": 0,
+        "dots": 0,
+        "fluid": "running",
+        "celebrationParticles": 17
+      }
+    },
+    {
+      "name": "clicks and typing work at every level, nothing covers the controls",
+      "status": "PASS",
+      "detail": {
+        "off": "ok",
+        "subtle": "ok",
+        "full": "ok",
+        "hard": "ok"
+      }
+    },
+    {
+      "name": "empty note gives error feedback, not success",
+      "status": "PASS",
+      "detail": {
+        "status": "Algo salió mal."
+      }
+    },
+    {
+      "name": "destroy restores compatibility, remount is clean",
+      "status": "PASS",
+      "detail": {
+        "oldTrailVisibleAfterDestroy": 7,
+        "remount": {
+          "canvases": 2,
+          "dotHosts": 1,
+          "same": true,
+          "owner": "liquid"
+        }
+      }
+    },
+    {
+      "name": "a previous owner value is restored, a later owner is not erased",
+      "status": "PASS",
+      "detail": {
+        "restored": "site-cursor",
+        "kept": "other-owner"
+      }
+    },
+    {
+      "name": "reduced motion changing at runtime turns everything to Nada",
+      "status": "PASS",
+      "detail": {
+        "fluid": "not-created",
+        "layer": "none"
+      }
+    },
+    {
+      "name": "same origin only, no console errors",
+      "status": "PASS",
+      "detail": {
+        "requests": 12
+      }
+    },
+    {
+      "name": "reduced motion from the first load: Nada, no dots, no old trail",
+      "status": "PASS",
+      "detail": {
+        "level": "off",
+        "intensity": "nada"
+      }
+    },
+    {
+      "name": "the visitor's mute and level choices are not overridden",
+      "status": "PASS",
+      "detail": {
+        "pressed": "false",
+        "level": "off",
+        "intensity": "nada",
+        "sfx": "off",
+        "stored": "off"
+      }
+    },
+    {
+      "name": "375 px: Juega works and nothing overflows at any level",
+      "status": "PASS",
+      "detail": {
+        "off": 360,
+        "subtle": 360,
+        "full": 360,
+        "hard": 360
+      }
+    }
+  ]
+}

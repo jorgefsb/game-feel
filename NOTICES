@@ -1,0 +1,31 @@
+NOTICES for Game Feel 1.0.0
+
+Scope of the MIT license
+  LICENSE covers only the code and written instructions in this repository:
+  src/, scripts/, tests/, examples/ (markup and script), docs/, skills/ and
+  README.md. It grants nothing over the third-party material listed below.
+
+Material that is downloaded, never committed
+  `npm run setup` writes the following into vendor/, which Git ignores.
+  Each file is checked against a pinned sha256 before use.
+
+  juice 1.2.0 (core, Juega menu, Hardcore module)
+    Source: https://github.com/jorgefsb/game-industry-resources
+    Path:   juice/1.2.0 at commit f1b3b9c77a43ffbcbd331bb88420a436614fdbc3
+    Author: Jorge Suárez
+    License: at that commit the repository declares no license file. This
+    repository does not redistribute juice and does not grant any right over
+    it. Ask the author before reusing juice outside your own evaluation.
+
+  Cursor líquido 1.0.0
+    Intended source: https://github.com/jorgefsb/cursor-liquido (release v1.0.0)
+    License: MIT, (c) 2026 Jorge Suárez. Its fluid display shading is adapted
+    from WebGL Fluid Simulation, (c) 2017 Pavel Dobryakov, MIT. See that
+    package's LICENSE and THIRD_PARTY_NOTICES. The renderer is used byte for
+    byte (sha256 3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230).
+
+Artwork and brand marks
+  This repository contains no mascot artwork and no brand marks. Game Feel
+  never downloads Moki. Moki belongs to the personal brand of Jorge Suárez and
+  is not licensed by this repository. Other brands use their own approved
+  mascot or none.
