@@ -1,5 +1,7 @@
 # Privacidad y licencias
 
+[Español](privacy-license.md) · [English](privacy-license.en.md)
+
 ## Datos
 
 El adapter no guarda nada, no lee cookies, no hace peticiones de red y no manda telemetría. Solo escribe un atributo en `<html>` mientras está montado.
@@ -31,3 +33,5 @@ Detalle en [../NOTICES](../NOTICES).
 ## Marcas y mascotas
 
 Game Feel es genérico y cualquier marca lo puede usar con su propia mascota o sin ninguna. No da derecho a usar la identidad, la voz ni la mascota de otra marca. Moki pertenece a la marca personal de Jorge Suárez y vive solo en el perfil `papacito-juice`.
+
+Medios de documentación: [aviso de arte y marca](ASSET-NOTICE.md).

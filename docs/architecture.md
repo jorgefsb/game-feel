@@ -1,5 +1,7 @@
 # Arquitectura
 
+[Español](architecture.md) · [English](architecture.en.md)
+
 ## Piezas y dueños
 
 | Pieza | Dueño de | Nunca toca |

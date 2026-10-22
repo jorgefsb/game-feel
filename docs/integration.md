@@ -1,5 +1,7 @@
 # Integración
 
+[Español](integration.md) · [English](integration.en.md)
+
 Guía para poner Game Feel con Cursor líquido en una página de cualquier marca. La demo [../examples/index.html](../examples/index.html) sigue estos mismos pasos.
 
 ## 1. Archivos en tu mismo origen
@@ -26,7 +28,7 @@ Las rutas son ejemplo. Lo que importa es que todo salga de tu dominio, sin CDNs 
 sha256sum juice/1.2.0/*.js juice/1.2.0/*.css juice/1.2.0/hardcore/*
 ```
 
-Compara contra la tabla de [../README.md](../README.md#fuentes-fijadas) y contra `manifest.json`. Repite la comprobación ya servido, desde la URL pública.
+Compara contra los pins de [setup-demo.mjs](../scripts/setup-demo.mjs) y contra `manifest.json`. Repite la comprobación ya servido, desde la URL pública.
 
 ## 2. HTML
 
