@@ -1,0 +1,12 @@
+# Portable repository documentation for agents
+
+[Español](REPOSITORY-DOCUMENTATION.md) · [English](REPOSITORY-DOCUMENTATION.en.md)
+
+1. Read README and integration, architecture, privacy and roadmap guides before editing. Check version and claims against real code. New or edited current guides need equivalent ES/EN counterparts, mutual links and literal commands/identifiers. Do not rewrite CHANGELOG or historical records.
+2. README answers what, who, why, how, when and where; then status, requirements, costs/licensing, privacy, limits and help. Put the first human action before developer installation. Do not imply a library installs itself or turn a proposal/demo into production.
+3. Use the [official brandkit](https://brandkit.jorgesuarez.com.mx/) and [asset notice](ASSET-NOTICE.md). No private paths, GBrain, credentials or machine dependency. Shared grammar: small official signature top-left, clear canonical product name in Outfit 700, plain benefit in Inter 400, black/orange, real demo on the right. Rasterize with official fonts for GitHub. No reinvented logos, neon or decorative gradients. Dark text on orange.
+4. Papacito Juice requires real authorized Moki, never mirrored or with invented poses; generic Game Feel neither requires nor receives a mascot dependency. Companies keep their identities. Brand assets are not MIT. Do not commit original WEBP, downloaded fonts or vendor files.
+5. Use real screenshots/recordings proportional to the task, without private data. Add ES/EN VTT captions and descriptive transcripts; label fictional data. If no speech was recorded, do not invent a spoken transcript. Encode H.264 when editing video. Do not promise universal performance or unmeasured business results.
+6. Before edits: `git status --short`, record HEAD and create a local backup ref. Do not change `src/`, `vendor/`, pins, tests, runtime, examples or versions to fix documentation. No publication without separate permission.
+7. Run `npm run verify`, `npm test`, `npm run test:browser`. Check links, ES/EN parity, six questions, asset hashes, dimensions and `ffprobe`. Render faithful Markdown with local media at 1280 and 375 px, inspect screenshots and overflow. Compare runtime/vendor byte-for-byte with baseline. Record evidence in `reports/docs-brandkit-verification.json`; never invent results or change assertions. Report exact blockers.
+8. Deliver local commits, branches, sample paths, results and Git status. No incidental push, tags, releases or deployment. Use ignored `qa/` for local QA and stop servers when finished.

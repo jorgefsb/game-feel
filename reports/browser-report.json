@@ -1,6 +1,6 @@
 {
   "suite": "game-feel",
-  "started": "2026-10-22T05:21:37.110Z",
+  "started": "2026-10-22T06:16:43.678Z",
   "playwright": "1.64.1",
   "chromium": "156.0.8078.4",
   "renderer": "Chromium headless with SwiftShader WebGL. Emulated viewports, not physical devices.",
@@ -84,9 +84,8 @@
       "detail": {
         "dots": 8,
         "colours": [
-          "rgb(34, 33, 31)",
-          "rgb(244, 232, 213)",
-          "rgb(255, 107, 53)"
+          "rgb(255, 107, 53)",
+          "rgb(34, 33, 31)"
         ]
       }
     },
@@ -94,7 +93,7 @@
       "name": "Hardcore shows one trail: liquid visible, old .jzh-t hidden, celebrations kept",
       "status": "PASS",
       "detail": {
-        "old": 4,
+        "old": 3,
         "oldVisible": 0,
         "dots": 0,
         "fluid": "running",
@@ -122,7 +121,7 @@
       "name": "destroy restores compatibility, remount is clean",
       "status": "PASS",
       "detail": {
-        "oldTrailVisibleAfterDestroy": 8,
+        "oldTrailVisibleAfterDestroy": 7,
         "remount": {
           "canvases": 2,
           "dotHosts": 1,
@@ -180,7 +179,7 @@
         "off": 360,
         "subtle": 360,
         "full": 360,
-        "hard": 373
+        "hard": 365
       }
     }
   ]

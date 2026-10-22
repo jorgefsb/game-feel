@@ -8,6 +8,8 @@ author: Jorge Suárez
 
 # Game Feel
 
+[Español](SKILL.es.md) · [English](SKILL.md)
+
 Make a page answer when people use it: clear, fast, with character, and never in the way. This skill is generic. Anything specific to one brand lives in that brand's profile. A mascot is optional.
 
 Related, separate repositories (intended public homes, check they exist before linking them):

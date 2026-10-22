@@ -1,5 +1,7 @@
 # Principios de diseño
 
+[Español](design-principles.md) · [English](design-principles.en.md)
+
 Game feel es lo que hace que una interfaz se sienta como un buen juego: responde al tocarla, tiene carácter y da ganas de volver. Este documento es genérico. Lo que cambia por marca vive en un perfil de marca.
 
 ## 1. Disparador más respuesta
