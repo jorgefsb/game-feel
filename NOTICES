@@ -1,4 +1,4 @@
-NOTICES for Game Feel 1.0.0
+NOTICES for Game Feel 1.0.1
 
 Scope of the MIT license
   LICENSE covers only the code and written instructions in this repository:
@@ -17,8 +17,8 @@ Material that is downloaded, never committed
     repository does not redistribute juice and does not grant any right over
     it. Ask the author before reusing juice outside your own evaluation.
 
-  Cursor líquido 1.0.0
-    Intended source: https://github.com/jorgefsb/cursor-liquido (release v1.0.0)
+  Cursor líquido 1.0.1
+    Intended source: https://github.com/jorgefsb/cursor-liquido (release v1.0.1)
     License: MIT, (c) 2026 Jorge Suárez. Its fluid display shading is adapted
     from WebGL Fluid Simulation, (c) 2017 Pavel Dobryakov, MIT. See that
     package's LICENSE and THIRD_PARTY_NOTICES. The renderer is used byte for

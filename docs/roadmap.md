@@ -30,4 +30,4 @@ La versión estable tiene cuatro niveles: Nada, Poquito, Mucho y Hardcore. Lo qu
 
 - Un interruptor documentado en juice para apagar la estela vieja de Hardcore, en lugar de ocultarla con CSS.
 - Texto del candado de Hardcore configurable por marca en `juice-menu.js`.
-- Publicar el release v1.0.0 de Cursor líquido para que `npm run setup` no necesite `--cursor-dir`.
+- Publicar el release v1.0.1 de Cursor líquido para que `npm run setup` no necesite `--cursor-dir`.

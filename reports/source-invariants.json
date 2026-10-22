@@ -1,0 +1,10 @@
+{
+  "src/game-feel-cursor.css": {
+    "metadataOnly": true,
+    "sha256": "da9ec736ac75246b76881a23e00f7b48cbd87ed5b429ea91bd2f490b5fd44d9d"
+  },
+  "src/game-feel-cursor.js": {
+    "metadataOnly": true,
+    "sha256": "a6ff2126157a75102a2bb3c5babc8d9ab818ab8e603cf8d76727fe68148adb3b"
+  }
+}

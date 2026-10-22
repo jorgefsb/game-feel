@@ -14,7 +14,7 @@ function walk(dir) {
     return statSync(abs).isDirectory() ? walk(abs) : [abs];
   });
 }
-const files = walk(ROOT).filter(f => !f.endsWith('package-lock.json'));
+const files = walk(ROOT).filter(f => !f.endsWith('package-lock.json') && !/\.(png|gif|mp4)$/.test(f));
 const text = f => readFileSync(f, 'utf8');
 
 test('no local paths, private hosts or credentials in committed files', () => {

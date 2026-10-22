@@ -23,7 +23,7 @@ La demo y los tests sirven todo desde `127.0.0.1` y fallan si una página pide a
 |---|---|---|
 | Código e instrucciones de Game Feel | MIT, ver [../LICENSE](../LICENSE) | Sí |
 | juice 1.2.0 | El repo de origen no declara licencia en el commit fijado | No. Se descarga a `vendor/`, ignorado |
-| Cursor líquido 1.0.0 | MIT, con sombreado adaptado de Pavel Dobryakov (MIT) | No. Se descarga o se construye en `vendor/`, ignorado |
+| Cursor líquido 1.0.1 | MIT, con sombreado adaptado de Pavel Dobryakov (MIT) | No. Se descarga o se construye en `vendor/`, ignorado |
 | Arte de mascotas | De cada marca | No. Game Feel no usa mascota |
 
 Detalle en [../NOTICES](../NOTICES).

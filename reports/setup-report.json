@@ -1,0 +1,15 @@
+{
+  "localSetup": "PASS: stable Cursor 1.0.1 dist; verified upstream juice and local Game Feel where applicable",
+  "remoteCursor": "PASS: default release v1.0.1 JS/CSS/manifest downloaded and hash-verified",
+  "defaultSetup": "PASS",
+  "upstream": {
+    "version": "1.2.0",
+    "commit": "f1b3b9c77a43ffbcbd331bb88420a436614fdbc3",
+    "files": 6
+  },
+  "publishOrder": [
+    "cursor-liquido v1.0.1",
+    "game-feel v1.0.1",
+    "papacito-juice v1.0.1"
+  ]
+}

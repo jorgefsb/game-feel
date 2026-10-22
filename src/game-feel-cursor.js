@@ -1,4 +1,4 @@
-/* Game Feel cursor adapter 1.0.0. MIT, (c) 2026 Jorge Suárez.
+/* Game Feel cursor adapter 1.0.1. MIT, (c) 2026 Jorge Suárez.
  * Connects an existing Cursor líquido build (window.LiquidCursor) to the
  * Juice level on <html data-jz-level>: off=nada, subtle=poquito,
  * full=mucho (10 px), hard=hardcore (18 px).
@@ -106,7 +106,7 @@
   }
 
   root.GameFeelCursor = {
-    version: '1.0.0',
+    version: '1.0.1',
     attribute: ATTRIBUTE,
     levels: LEVELS,
     radii: RADII,

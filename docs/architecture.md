@@ -7,7 +7,7 @@
 | `juice.js` 1.2.0 | El nivel (`data-jz-level`), el sonido, los presets de respuesta | El cursor |
 | `juice-menu.js` 1.2.0 | El menú «Juega» y el candado de Hardcore | El cursor |
 | `hardcore/hardcore.js` 1.2.0 | Imán, squash, chispas, combos, escombro y su estela vieja `.jzh-t` | El nivel |
-| Cursor líquido 1.0.0 | Las capas del puntero: puntos de Poquito y fluido de Mucho y Hardcore | El nivel, el sonido, la mascota |
+| Cursor líquido 1.0.1 | Las capas del puntero: puntos de Poquito y fluido de Mucho y Hardcore | El nivel, el sonido, la mascota |
 | `GameFeelCursor` (este repo) | Montar un solo cursor y marcar `data-game-feel-cursor` | Todo lo demás |
 | La página | Sus acciones núcleo, sus logros y su marca | Archivos publicados de juice o del cursor |
 

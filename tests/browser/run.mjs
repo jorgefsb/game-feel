@@ -26,6 +26,23 @@ await suite('game-feel', async ({ browser, url, test, shot }) => {
   const page = await open(browser, url, PAGE);
   await ready(page);
 
+  await test('stable 1.0.1 cursor and quality-safe adapter are loaded', async () => {
+    const v = await page.evaluate(() => ({ cursor: LiquidCursor.version, gameFeel: GameFeelCursor.version, adapter: FluidEngine.name }));
+    assert.deepEqual(v, { cursor: '1.0.1', gameFeel: '1.0.1', adapter: 'QualitySafeAdapter' });
+    const input = await page.evaluate(() => {
+      const cursor = getComputedStyle(document.body).cursor;
+      scrollTo(0, 120);
+      return new Promise(resolve => requestAnimationFrame(() => {
+        const scroll = scrollY;
+        scrollTo(0, 0);
+        resolve({ cursor, scroll });
+      }));
+    });
+    assert.notEqual(input.cursor, 'none', 'the native pointer must stay visible');
+    assert.ok(input.scroll > 0, 'the cursor must not block scrolling');
+    return { ...v, input };
+  });
+
   await test('generic page runs without any mascot', async () => {
     const v = await page.evaluate(() => ({ moki: typeof window.Moki, spots: document.querySelectorAll('.moki,[data-moki]').length, owner: document.documentElement.getAttribute('data-game-feel-cursor') }));
     assert.equal(v.moki, 'undefined');

@@ -1,6 +1,6 @@
 {
   "name": "game-feel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Game Feel methodology plus a small adapter that connects Cursor líquido to juice levels. Generic, no mascot required.",
   "private": true,
   "license": "MIT",

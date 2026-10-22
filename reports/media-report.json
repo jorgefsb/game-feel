@@ -1,0 +1,143 @@
+{
+  "cursor": {
+    "version": "1.0.1",
+    "origin": "release https://github.com/jorgefsb/cursor-liquido/releases/download/v1.0.1/",
+    "golden_engine_sha256": "3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230",
+    "files": {
+      "cursor-liquido.js": "d1ce69c56780c1a0ed23499e4cd4db3e00f797c0dddab7f54b341b7dbe5802f8",
+      "cursor-liquido.css": "48ea2645dd676a870fda373edb4b418707814040032ba38655ab20888d4283b3"
+    }
+  },
+  "renderer": "Chromium + SwiftShader; real pointer events; unchanged engine budget",
+  "levels": [
+    {
+      "level": "subtle",
+      "stats": {
+        "owner": "liquid",
+        "juiceLevel": "subtle",
+        "intensity": "poquito",
+        "layer": "dots",
+        "radius": 0,
+        "source": "data-jz-level",
+        "sourcePending": false,
+        "color": "#FF6B35",
+        "touch": false,
+        "dots": {
+          "state": "running",
+          "alive": 1,
+          "spawned": 17,
+          "frames": 0,
+          "max": 29
+        },
+        "fluid": {
+          "state": "not-created"
+        }
+      },
+      "mokiVisible": 0
+    },
+    {
+      "level": "full",
+      "stats": {
+        "owner": "liquid",
+        "juiceLevel": "full",
+        "intensity": "mucho",
+        "layer": "fluid",
+        "radius": 10,
+        "source": "data-jz-level",
+        "sourcePending": false,
+        "color": "#FF6B35",
+        "touch": false,
+        "dots": {
+          "state": "off",
+          "alive": 0,
+          "spawned": 0,
+          "frames": 0,
+          "max": 29
+        },
+        "fluid": {
+          "state": "running",
+          "frames": 61,
+          "splats": 27,
+          "impacts": 0,
+          "wallCount": 0,
+          "error": null,
+          "quality": "reduced",
+          "play": "subtle",
+          "radius": 10,
+          "maskUploads": 2
+        }
+      },
+      "mokiVisible": 0
+    },
+    {
+      "level": "hard",
+      "stats": {
+        "owner": "liquid",
+        "juiceLevel": "hard",
+        "intensity": "hardcore",
+        "layer": "fluid",
+        "radius": 18,
+        "source": "data-jz-level",
+        "sourcePending": false,
+        "color": "#FF6B35",
+        "touch": false,
+        "dots": {
+          "state": "off",
+          "alive": 0,
+          "spawned": 0,
+          "frames": 0,
+          "max": 29
+        },
+        "fluid": {
+          "state": "running",
+          "frames": 53,
+          "splats": 27,
+          "impacts": 0,
+          "wallCount": 0,
+          "error": null,
+          "quality": "reduced",
+          "play": "full",
+          "radius": 18,
+          "maskUploads": 2
+        }
+      },
+      "mokiVisible": 0
+    }
+  ],
+  "video": "qa/video/page@22b3afeea11e4b9c3910deace65394b3.webm",
+  "media": {
+    "docs/media/demo.gif": {
+      "sha256": "5c60e7e017891f2fd7b917bdb379f6c232e01c43f66a058ddd0788e3fc261c8f",
+      "bytes": 689786
+    },
+    "docs/media/demo.mp4": {
+      "sha256": "8b12f14808ffe6904abaa71540e1380889e0cdda2e3687f33a525c6f08c694ab",
+      "bytes": 348396
+    },
+    "docs/media/hardcore.png": {
+      "sha256": "2615f45f8f9e2972abf762714f123ed84e788a3d46426df932a2f1142eeca8fb",
+      "bytes": 107039
+    },
+    "docs/media/mucho.png": {
+      "sha256": "098f9b92ca1aae99496923d5ffe0f9959f754445f0945f8977e8c41ee8a4f2f8",
+      "bytes": 96430
+    },
+    "docs/media/poquito.png": {
+      "sha256": "50d78090455a121109489eebae713c9a2428dfe98b667150ba1baed8be1ebea6",
+      "bytes": 90466
+    }
+  },
+  "videoProbe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "format": {
+      "duration": "13.880000"
+    }
+  }
+}

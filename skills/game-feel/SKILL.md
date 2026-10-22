@@ -1,7 +1,7 @@
 ---
 name: game-feel
 description: "Use when adding game feel to a web page or app: micro-interactions, sound with consent, levels Nada to Hardcore, an optional mascot, ethical return loops and the Cursor líquido pointer trail, for any brand with its own profile."
-version: 1.0.0
+version: 1.0.1
 license: MIT
 author: Jorge Suárez
 ---
@@ -68,7 +68,7 @@ Before installing, write the profile: owner and approver, particle colours (`--j
 
 1. Serve everything from the site's own origin. No runtime CDN. Never edit a published file of juice or Cursor líquido. A fix is a new version of that package.
 2. juice 1.2.0 generic subset (core, menu, `hardcore/`) from `jorgefsb/game-industry-resources`, folder `juice/1.2.0`, at a pinned commit. Verify every sha256 against that commit's `manifest.json`, in the repo and once served. Read the hashes from the manifest, never from old notes.
-3. Cursor líquido 1.0.0 dist. Its renderer travels byte for byte. Check the published golden hash.
+3. Cursor líquido 1.0.1 dist. Its renderer travels byte for byte. Check the published golden hash.
 4. The Game Feel adapter `src/game-feel-cursor.js` and `src/game-feel-cursor.css`, then `GameFeelCursor.mount({ requireJuice: true })`.
 5. One cursor owner. While mounted, the adapter marks `<html data-game-feel-cursor="liquid">` and its CSS hides only the older Hardcore pointer dots (`.jzh-t`). Celebrations, debris, combos and sounds stay. This hides the old trail. It does not stop `hardcore.js` from creating those hidden nodes, so say so honestly. `destroy()` restores the previous attribute value.
 6. Never send `off|subtle|full|hard` straight to an older fluid engine. Use the cursor's own `followJuice` mapping.

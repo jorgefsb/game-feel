@@ -6,7 +6,7 @@
 
   const status = document.getElementById('cursor-status');
   const paint = () => {
-    const s = cursor.stats;
+    const s = GameFeelCursor.current.stats;
     status.textContent = 'Juega: ' + s.juiceLevel + ' · cursor: ' + s.intensity + ' (' + s.layer + (s.radius ? ', ' + s.radius + ' px' : '') + ')';
   };
   new MutationObserver(paint).observe(doc, { attributes: true, attributeFilter: ['data-jz-level'] });
