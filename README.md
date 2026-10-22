@@ -78,7 +78,7 @@ Sirve juice 1.2.0 (núcleo, menú, Hardcore), Cursor líquido 1.0.1 y `src/game-
 
 ## Estado, costos, privacidad y ayuda
 
-Esta revisión es documentación local: no publica versiones ni verifica un despliegue. El perfil/adaptador sigue en **1.0.1**; juice es **1.2.0**, commit `f1b3b9c77a43ffbcbd331bb88420a436614fdbc3`. Los pins de [setup](scripts/setup-demo.mjs) mandan; `verify` valida disco, bundle, renderer, adapter, guard y wrapper. El guard preserva input pendiente al bajar calidad sin cambiar shaders ni presupuesto.
+Esta revisión actualiza documentación: no cambia el runtime, no crea una release ni acredita un despliegue. El perfil/adaptador sigue en **1.0.1**; juice es **1.2.0**, commit `f1b3b9c77a43ffbcbd331bb88420a436614fdbc3`. Los pins de [setup](scripts/setup-demo.mjs) mandan; `verify` valida disco, bundle, renderer, adapter, guard y wrapper. El guard preserva input pendiente al bajar calidad sin cambiar shaders ni presupuesto.
 
 Código propio e instrucciones: [MIT](LICENSE), sin tarifa de licencia de este código. Integración, alojamiento y mantenimiento pueden costar. El origen de juice no declara licencia en el commit fijado: no asumas permiso de redistribución. Firma, marca y Moki **no son MIT**, ni una licencia de assets; ver [NOTICES](NOTICES) y [aviso de medios](docs/ASSET-NOTICE.md). `vendor/` y los WEBP originales no se versionan.
 

@@ -78,7 +78,7 @@ Serve juice 1.2.0 (core, menu, Hardcore), Cursor líquido 1.0.1 and `src/game-fe
 
 ## Status, costs, privacy and help
 
-This revision is local documentation: it does not publish versions or verify a deployment. The profile/adapter remains **1.0.1**; juice is **1.2.0**, commit `f1b3b9c77a43ffbcbd331bb88420a436614fdbc3`. [Setup pins](scripts/setup-demo.mjs) are authoritative; `verify` checks disk, bundle, renderer, adapter, guard and wrapper. The guard preserves pending input during quality reduction without changing shaders or budget.
+This revision updates documentation: it does not change runtime, create a release or certify a deployment. The profile/adapter remains **1.0.1**; juice is **1.2.0**, commit `f1b3b9c77a43ffbcbd331bb88420a436614fdbc3`. [Setup pins](scripts/setup-demo.mjs) are authoritative; `verify` checks disk, bundle, renderer, adapter, guard and wrapper. The guard preserves pending input during quality reduction without changing shaders or budget.
 
 Own code and instructions: [MIT](LICENSE), no license fee for this code. Integration, hosting and maintenance may cost money. The juice source declares no license at the pinned commit: do not assume redistribution permission. Signature, brand and Moki **are not MIT** or an asset license; see [NOTICES](NOTICES) and the [media notice](docs/ASSET-NOTICE.md). `vendor/` and original WEBP files are not committed.
 
