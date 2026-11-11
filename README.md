@@ -1,73 +1,104 @@
-# Game Feel 1.0.1
+<div align="center">
 
-Método y adaptador genérico para que una página responda a tus acciones. Conecta el menú «Juega» de juice con Cursor líquido, sin mascota obligatoria y sin decidir por la persona.
+<a href="https://github.com/jorgefsb/game-feel/releases/tag/v1.0.1"><img src="docs/readme/banner-en.svg" width="1000" alt="Game Feel: Make your page respond the way a game does, and let each person choose how much." /></a>
 
-[Repositorio](https://github.com/jorgefsb/game-feel) · [Versión 1.0.1](https://github.com/jorgefsb/game-feel/releases/tag/v1.0.1) · [Cursor líquido 1.0.1](https://github.com/jorgefsb/cursor-liquido/releases/tag/v1.0.1)
+<br />
 
-![Demo real: cambio de intensidad del cursor](docs/media/demo.gif)
+<img src="docs/readme/lang-en-on.svg" height="44" alt="English, current language" />
+<a href="./README.es.md"><img src="docs/readme/lang-es.svg" height="44" alt="Leer en español" /></a>
 
-[Ver el video MP4](docs/media/demo.mp4). Capturas y grabación de [examples/](examples/index.html), con eventos reales del puntero y sin tinta simulada. Chromium con WebGL por SwiftShader; no es una prueba en un teléfono físico.
+<br />
 
-## Qué hace
+**[▶ See version 1.0.1](https://github.com/jorgefsb/game-feel/releases/tag/v1.0.1)** · More projects at [github.com/jorgefsb](https://github.com/jorgefsb)
 
-Al tocar, escribir o guardar, la página responde con movimiento y sonido según el nivel elegido. Cursor líquido añade la estela del puntero. El adaptador evita que la estela vieja de Hardcore se dibuje encima: conserva las celebraciones y no bloquea clics, escritura ni scroll. El puntero nativo permanece visible.
+</div>
 
-| Juega | Valor | Respuesta del cursor |
+---
+
+<p align="center"><img src="docs/media/demo.gif" width="720" alt="Real Game Feel demo: the Juega menu changes the intensity and the cursor trail responds"></p>
+<p align="center"><sub>Real recording of <code>examples/</code>, with real pointer events. Chromium with software WebGL. <a href="docs/media/demo.mp4">Watch the MP4 video</a></sub></p>
+
+## What is it?
+
+A method and a generic adapter that make a page respond to what you do. It connects the juice «Juega» menu with [Cursor líquido](https://github.com/jorgefsb/cursor-liquido), with no mascot required.
+
+## Who is it for?
+
+For teams and brands with their own site who want microinteractions, sound and a cursor trail in their own identity.
+
+## What pain does it solve?
+
+Most pages do not respond: you tap, type or save and nothing happens. And when someone adds effects, they decide for the person: they play sound without permission, cover clicks or ignore people who asked for less motion.
+
+## The proposal
+
+Treat a page the way you treat a game. The person opens «Juega» and chooses how much the site responds. The adapter respects their level and sound choice, and never blocks clicks, typing or scrolling.
+
+| Juega | Value | What the cursor does |
 |---|---|---|
-| Nada | `off` | Sin efecto; reduced motion fuerza este nivel |
-| Poquito | `subtle` | Puntos originales de 7 px, sin WebGL |
-| Mucho | `full` | Fluido con radio de 10 px CSS |
-| Hardcore | `hard` | Fluido con radio de 18 px CSS |
+| Nada | `off` | No effect. Reduced motion forces this level |
+| Poquito | `subtle` | 7 px dots, no WebGL |
+| Mucho | `full` | Fluid with a 10 px radius |
+| Hardcore | `hard` | Fluid with an 18 px radius |
 
-No hay quinto nivel estable. El visitante conserva su elección de sonido y nivel.
+| Poquito | Mucho | Hardcore |
+|---|---|---|
+| ![Poquito: dots](docs/media/poquito.png) | ![Mucho: 10 px fluid](docs/media/mucho.png) | ![Hardcore: 18 px fluid](docs/media/hardcore.png) |
 
-### Poquito
-![Poquito: puntos originales](docs/media/poquito.png)
+## How do I use it?
 
-### Mucho
-![Mucho: fluido de 10 px](docs/media/mucho.png)
-
-### Hardcore
-![Hardcore: fluido de 18 px](docs/media/hardcore.png)
-
-## Instalar y probar
-
-Requiere Node.js 20 o posterior. No hay paquete publicado en npm.
+To try it on your machine you need Node.js 20 or later:
 
 ```sh
 npm ci
 npm run setup
-npm run verify
 npm run demo
+```
+
+Open the address the server prints and go to `/examples/`.
+
+To put it on another page, serve juice 1.2.0, Cursor líquido 1.0.1 and `src/game-feel-cursor.{js,css}` from your own domain, then call:
+
+```js
+GameFeelCursor.mount({ requireJuice: true })
+```
+
+Putting it on a site takes technical integration. Script order and options are in [docs/integration.md](./docs/integration.md) (in Spanish).
+
+## When it fits and when it doesn't
+
+It fits when you have your own brand and want your site to respond to touch.
+
+It does not fit if what you want is Moki: that is [Papacito Juice](https://github.com/jorgefsb/papacito-juice), and Moki is not licensed. There is no npm package and no test on physical phones.
+
+## Where can I try it?
+
+**[Version 1.0.1](https://github.com/jorgefsb/game-feel/releases/tag/v1.0.1)** and the local demo in `examples/`. You can see it working live at [jorgesuarez.com.mx](https://jorgesuarez.com.mx), with the personal brand profile.
+
+## How far we got
+
+Version 1.0.1, MIT. Four stable levels; there is no fifth. The suite covers levels, controls, unmounting, emulated mobile, reduced motion and preferences.
+
+Known limit: on software WebGL the engine may lower quality or pause if it goes over its budget.
+
+## For builders
+
+```sh
+npm run verify        # compares files on disk against pinned hashes
 npm test
 npm run test:browser
 ```
 
-Abre la dirección que imprime el servidor y entra a `/examples/`. `setup` descarga las dependencias de fuentes versionadas y verifica sus SHA-256 antes de escribir `vendor/`. No necesita opciones locales. Para ejecutar Chromium instala su navegador con `npx playwright install chromium`.
+Pinned versions, guarantees, architecture and principles, in Spanish: [technical guide](./docs/GUIA-TECNICA.md), [architecture](./docs/architecture.md) and [principles](./docs/design-principles.md).
 
-Para una comprobación sin descargar el release puedes usar `npm run setup -- --cursor-dir ruta/a/cursor-liquido/dist`. Solo se acepta el `dist` estable 1.0.1 con manifest, JS y CSS exactos. No existe un fallback que empaquete fuentes antiguas. `--juice-dir` permite una copia local del mismo núcleo verificado.
+## License
 
-## Versiones y garantías
+Code and instructions: [MIT](./LICENSE). Moki, his art and the personal brand are not MIT and no reuse permission is granted. See [NOTICES](./NOTICES).
 
-- **Game Feel 1.0.1** es la versión de este adaptador.
-- **juice 1.2.0** es otro paquete: permanece byte por byte en el commit `f1b3b9c77a43ffbcbd331bb88420a436614fdbc3` de [game-industry-resources](https://github.com/jorgefsb/game-industry-resources/tree/f1b3b9c77a43ffbcbd331bb88420a436614fdbc3/juice/1.2.0).
-- **Cursor líquido 1.0.1 estable** conserva renderer y adaptador aprobados. Incluye el guard externo que preserva input pendiente cuando baja la calidad, sin cambiar shaders, color ni presupuesto de cuadros.
-- Solo se descargan los 6 archivos genéricos de juice y su manifest. No se descarga Moki.
+---
 
-Los hashes completos están en [scripts/setup-demo.mjs](scripts/setup-demo.mjs). `verify` comprueba los archivos en disco contra pins propios, no solo contra un informe generado. El bundle se valida completo y también por renderer, adapter, guard y wrapper.
+<div align="center">
 
-## Integrar en otra página
+<sub>Made with love ❤️🎮 by <a href="https://jorgesuarez.com.mx">JorgeSuarez.com.mx</a> · <a href="https://github.com/jorgefsb">More projects</a> · <a href="./README.es.md">Leer en español</a><br />Documentation updated on 10 Nov 2026.</sub>
 
-Sirve desde tu propio origen juice 1.2.0 (núcleo, menú y Hardcore), Cursor líquido 1.0.1 y `src/game-feel-cursor.{js,css}`. Después llama `GameFeelCursor.mount({ requireJuice: true })`. El adaptador lee `data-jz-level`, no lo escribe. `destroy()` restaura el atributo previo de compatibilidad. El perfil con Moki está en [Papacito Juice](https://github.com/jorgefsb/papacito-juice).
-
-Orden de scripts, API, opciones y rollback en [Integración](docs/integration.md). También: [Arquitectura](docs/architecture.md), [Principios](docs/design-principles.md), [Licencia y privacidad](docs/privacy-license.md).
-
-## Verificación y límites
-
-Los resultados reales viven en [reports/browser-report.json](reports/browser-report.json) y [reports/media-report.json](reports/media-report.json). La suite cubre niveles, controles, desmontaje, móvil emulado, reduced motion y preferencias. Las capturas de QA quedan en `qa/`, ignorado por Git.
-
-En SwiftShader el motor puede reducir calidad o pausarse si supera su presupuesto; ese límite sigue activo. La estela vieja de Hardcore se oculta mediante CSS, pero juice sigue creando sus nodos. El fluido se mezcla con `screen` y se aprecia mejor en fondo oscuro.
-
-## Licencia
-
-Código e instrucciones: [MIT](LICENSE). Moki, su arte y la marca personal **no son MIT**: no se concede permiso de reutilización. Las capturas y el video muestran la integración autorizada de la marca personal; no son un paquete de assets. Los WEBP de Moki no se incluyen en este repositorio. Las dependencias descargadas permanecen en `vendor/`, ignorado por Git. Ver [NOTICES](NOTICES).
+</div>
